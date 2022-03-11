@@ -2,7 +2,11 @@
 #include <time.h>
 #include <stdio.h>
 
-/* betty style doc for function main goes there */
+/**
+ * main - prints value of n after passing through conditional statements
+ * followed by a new line.
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
 	int n;
