@@ -1,25 +1,25 @@
+#include <stdio.h>
 #include "lists.h"
 
 /**
- * sum_listint - finds the sum of all the integers in the list @head
- * @head: the first element in the linked list
+ * sum_listint - Sums every int of every node
+ * @head: pointer to a struc
  *
- * Return: the sum of all ints in the linked list starting with @head
- *		   0 if head is NULL
- */
+ * Return: Returns the sum
+**/
 
 int sum_listint(listint_t *head)
 {
-	int sum = 0;
+int sum = 0;
 
-	if (!head)
-		return (0);
+if (head == NULL)
+return (0);
 
-	while (head != NULL)
-	{
-		sum += head->n;
-		head = head->next;
-	}
+while (head != NULL)
+{
+sum += head->n;
+head = head->next;
+}
 
-	return (sum);
+return (sum);
 }

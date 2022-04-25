@@ -1,18 +1,26 @@
+#include <stdlib.h>
 #include "lists.h"
 
 /**
- * free_listint2 - deletes the list @head from the heap
- * @head: the list to be deleted
+ * free_listint2 - Frees a list and sets head to NULL
+ * @head: pointer to a struc
  *
- * Return: void
- */
+ * Return: Nothing
+**/
 
 void free_listint2(listint_t **head)
 {
-	if (!*head || !head)
-		return;
-	if ((*head)->next)
-		free_listint2(&((*head)->next));
-	free(*head);
-	(*head) = NULL;
+listint_t *tmp;
+
+if (head == NULL)
+return;
+
+while (*head != NULL)
+{
+tmp = *head;
+*head = (*head)->next;
+free(tmp);
+}
+
+*head = NULL;
 }
